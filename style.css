@@ -1,0 +1,14 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+#startButton {
+  width: 100px;
+  align-items: center;
+}
+.disappear {
+  display: none;
+}
+.appear{
+  display:block;
+}

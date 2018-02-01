@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
 
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
 
-    <title></title>
-  </head>
-  <body>
-<script type="text/javascript" src="game3.js"></script>
-  </body>
-</html
+<body>
+  <main>
+    <div id="startDiv" class="appear">
+      <button id="startButton">Start</button>
+    </div>
+    <div class="gameButtons">
+      <button id="attackButton">Attack</button>
+      <button id="healButton">Heal</button>
+      <button id="quitButton">Quit</button>
+    </div>
+    <div class="healthbars">
+      <progress id="userHealth" value="40" max="40"></progress>
+      <progress id="grantHealth" value="10" max="10"></progress>
+      <progress id="userHeals" value="2" max="2"></progress>
+      <progress id="wins" value="0" max="5"></progress>
+    </div>
+
+  </main>
+  <script src="game4.js"></script>
+</body>
+
+</html>
