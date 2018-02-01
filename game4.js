@@ -21,10 +21,10 @@
     health: 40,
     healsRemaining: 2,
     wins: 0,
-    generateAttackDamage:function() {
+    generateAttackDamage: function() {
       return (Math.floor(Math.random() * 1) + 3);
     },
-   heal: function () {
+    heal: function() {
       if (this.healsRemaining > 0) {
         this.healsRemaining--;
         return (Math.floor(Math.random() * 1) + 10);
@@ -39,8 +39,8 @@
     },
   };
   // Game starts here when you hit start. All other options in game are visible
-    startButton.onclick = function() {
-      var startDiv = document.getElementById("startDiv");
+  startButton.onclick = function() {
+    var startDiv = document.getElementById("startDiv");
     character.name = prompt("Enter your name");
     startDiv.classList.add("disappear");
     startDiv.classList.remove("appear");
@@ -52,16 +52,17 @@
     document.getElementById("wins").style.display = "block";
     startCombat();
   }
+
   function updateDisplay() {
 
     userHealthBar.value = character.health;
   }
+
   function updateMessage(newMessage) {
     messageEl.innerText = newMessage;
   }
 
   function startCombat() {
-    while (character.wins < 5 && character.health > 0) {
       attackButton.onclick = function() {
         character.health -= grant.generateAttackDamage();
         grant.health -= character.generateAttackDamage();
@@ -83,7 +84,7 @@
         character.wins++;
         grant.health = 10;
       }
-    }
+
 
     if (character.health <= 0) {
       updateMessage(character.name + "lost");
